@@ -1,0 +1,27 @@
+* {
+    background-color: rgb(236, 241, 248);
+}
+
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+section {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+article div {
+    text-align: center;
+}
+
+img {
+    width: 60px;
+    height: 60px;
+}
