@@ -1,86 +1,74 @@
-let puntosUsuario = 0
-let puntosIA = 0
+const palabraClave = `JAVASCRIPT`
 
+let palabraOculta = [`J`, `_`, `V`, `_`, `_`, `C`, `_`, `_`, `_`, `T`];
 
-function salirPrograma() {
-    console.log("saliste del programa");
-    return null;
-}
+let numIntentos = 6;
 
+function adivinarPalabra() {
+    let letraIngresada = prompt(`Ingrese una letra, tiene ${numIntentos} intentos:
+        Palabra Oculta: ${palabraOculta.join(` `)}`).toUpperCase();
 
-function opcionUsuario() {
-    let opcion = parseInt(prompt("Elegi una opcion entre : Piedra - Papel - Tijera ingresando un numero, o marca 0 para terminar el programa. \nMarca: \n1. Para piedra \n2. Para papel \n3. Para tijera \n0. Para terminar el programa"));
-
-    if (opcion === 0) {
-        return salirPrograma();
+    if (letraIngresada === null) {
+        console.log(`Decidiste terminar el juego. No te preocupes! Puedes volver a jugar cuando quieras!`)
+        return null;
     }
 
+    while ([`J`, `V`, `C`, `T`].includes(letraIngresada) || (letraIngresada === ``)) {
+        letraIngresada = prompt(`Por favor, vuelva a ingresar otra letra, tiene 6 intentos:
+            Palabra Oculta: ${palabraOculta.join(` `)}`).toUpperCase();
 
-    while (opcion !== 1 && opcion !== 2 && opcion !== 3) {
-        alert("La opcion ingresada no es valida. Por favor vuelva a ingresar una opcion que se encuentre dentro de las posibilidades");
-
-        opcion = parseInt(prompt("Vuelve a elegir una opcion entre : \n1.Piedra \n2.Papel \n3.Tijera \n0. Salir del programa"));
-
-        if (opcion === 0) {
-            return salirPrograma();
+        if (letraIngresada===null){
+            return null;
         }
-
     }
 
-    return opcion;
+    return letraIngresada;
+
 }
 
-
-
-
-function opcionIA() {
-
-    return Math.floor(Math.random() * 3) + 1;
-
+function reiniciarJuego() {
+    numIntentos = 6;
+    palabraOculta = [`J`, `_`, `V`, `_`, `_`, `C`, `_`, `_`, `_`, `T`];
 }
 
 while (true) {
-
-
-    while (puntosUsuario < 3 && puntosIA < 3) {
-        let eleccionUsuario = opcionUsuario();
-        let eleccionIA = opcionIA();
-
-        if (eleccionUsuario === null) {
+    while (numIntentos > 0 && palabraOculta.includes(`_`)) {
+        let letraIngresada = adivinarPalabra();
+    
+    
+        if (letraIngresada === null) {
             break;
         }
-
-
-        if (eleccionUsuario === eleccionIA) {
-            console.log("Empate!")
+    
+    
+        if (palabraClave.includes(letraIngresada)) {
+            console.log(`Felicidades, acertaste una letra! Te quedan ${numIntentos} intentos!`);
+    
+    
+    
+            for (let i = 0; i < palabraClave.length; i++) {
+                if (palabraClave[i] === letraIngresada) {
+                    palabraOculta[i] = letraIngresada;
+                }
+            }
         }
-        else if
-            ((eleccionUsuario === 1 && eleccionIA === 3) ||
-            (eleccionUsuario === 2 && eleccionIA === 1) ||
-            (eleccionUsuario === 3 && eleccionIA === 2)) {
-
-            console.log("Ganaste. Sumas 1 punto!");
-            puntosUsuario++
-
-
-        }
+    
+    
         else {
-            console.log("Perdiste. La IA suma 1 punto")
-            puntosIA++
-
-
+            numIntentos--
+            console.log(`Incorrecto, no te precoupes, te quedan ${numIntentos} intentos`)
         }
-
-        console.log("Puntos del usuario:", puntosUsuario, "Puntos de IA", puntosIA)
-
+    
+    
     }
-
-
-    if (puntosUsuario > puntosIA) {
-        console.log("Felicidades, ganaste!");
+    
+    
+    if (!palabraOculta.includes(`_`)) {
+        alert(`Felicidades, adivinaste la palabra. ${palabraClave}`);
     }
+    
     else {
-        console.log("Perdiste, no te preocupes, puedes volver a intentarlo.");
+        console.log(`Te quedaste sin intentos! La palabra clave era ${palabraClave}`);
     }
 
 
@@ -88,5 +76,7 @@ while (true) {
         console.log("Gracias por jugar!")
         break;
     }
+    else {
+        reiniciarJuego();
+    }
 }
-
