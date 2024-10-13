@@ -1,24 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 * {
-    background-color: rgb(236, 241, 248);
+    font-family: "Caveat" , cursive;
 }
 
+body {
+    background-image: url(/img/ahorcado.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 main {
-    text-align: center;
+    width: 80%  ;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.562);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 170px;
+    gap: 100px;
 }
 
 h1 {
-    font-size: 38px;
+    text-align: center;
+    font-size: 70px;
+    color: white;
+}
+
+#palabra_a_adivinar {
+    font-size: 50px;
+}
+
+#palabra_a_adivinar span{
+    font-size: 50px;
+    border-bottom: 2px solid black;
+    width: 50px;
+    text-align: center;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#jugar {
+    font-size: 25px;
+}
+
+#letras {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+#letras button {
+    font-size: 20px;
+    padding: 30px;
+    width: 70px;
 }
 
 
 img {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: auto;
+}
 
+#resultado {
+    font-size: 30px;
+}
+
+.contador p {
+    font-size: 20px;
+    display: flex;
+    justify-content: flex-end;
 }
