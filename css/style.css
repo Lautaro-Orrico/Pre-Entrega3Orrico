@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(/img/ahorcado.jpg);
+    background-image: url(..//img/ahorcado.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

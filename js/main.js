@@ -73,7 +73,7 @@ function click_letras(event) {
     }
     if (acerto == false) {
         errores++
-        const source = `/img/${errores}.png`
+        const source = `..//img/${errores}.png`
         const imagen = document.getElementById(`imagen`)
         imagen.src = source
     }
