@@ -29,7 +29,7 @@ function fin_del_juego() {
 
 function inicio(event) {
     document.getElementById(`resultado`).innerHTML = ``
-    imagen.src = `/img/0.png`
+    imagen.src = `..//img/0.png`
     errores = 0
     aciertos = 0
     boton.disabled = true
