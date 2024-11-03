@@ -1,60 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <title>Juego del ahorcado</title>
+    <title>Juego de memoria</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Ahorcado</h1>
     <main>
-        <img id="imagen" src="img/0.png" alt="">
-        <div>
-            <div class="contador">
-                <p id="partidas_jugadas">Partidas Jugadas=0</p>
-                <p id="contador_aciertos">Contador de Aciertos =0</p>
-                <p id="contador_derrotas">Contador de Derrotas=0</p>
-                <p id="winrate">Winrate =0</p>
-            </div>
-            <p id="palabra_a_adivinar">
-            </p>
-            <button id="jugar">Generar palabra</button>
-            <p id="resultado"></p>
-            <div id="letras">
-                <button>a</button>
-                <button>b</button>
-                <button>c</button>
-                <button>d</button>
-                <button>e</button>
-                <button>f</button>
-                <button>g</button>
-                <button>h</button>
-                <button>i</button>
-                <button>j</button>
-                <button>k</button>
-                <button>l</button>
-                <button>m</button>
-                <button>n</button>
-                <button>ñ</button>
-                <button>o</button>
-                <button>p</button>
-                <button>q</button>
-                <button>r</button>
-                <button>s</button>
-                <button>t</button>
-                <button>u</button>
-                <button>v</button>
-                <button>w</button>
-                <button>x</button>
-                <button>y</button>
-                <button>z</button>
-            </div>
+        <div class="info_partida">
+            <h1>Juego de memoria</h1>
+            <button id="boton">Jugar</button>
+            <p id="partidas-jugadas">Partidas jugadas: 0</p>
+            <p id="giras-carta">Cartas giradas: 0</p>
         </div>
-    </main>
-    <script src="js/main.js"></script>
-</body>
+        <section class="cartas">
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
 
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article>
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+
+            <article class="">
+                <img class="reverso" src="img/carta.png" alt="">
+                <div class="pokemon">
+                    <img src="" alt="">
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="main.js"></script>
+</body>
 </html>
